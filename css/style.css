@@ -33,8 +33,24 @@ section {
     text-transform: uppercase;
     text-align: center;
     padding-top: 30px;
-    margin: 0 auto;
+    margin: 10px;
     position: fixed;
+}
+
+.github {
+    color: #fff;
+    display: block;
+    position: absolute;
+    left: 95%;
+    pointer-events: all;
+}
+
+.github a {
+    color: #fff;
+    display: block;
+    padding: 10px;
+    pointer-events: all;
+    z-index: 2;
 }
 
 audio {
@@ -362,74 +378,69 @@ audio {
     pointer-events: all;
 }
 
-section:active {
+#battle:active {
     background: #000 url('http://wallpapercave.com/wp/r1YOpKf.jpg') no-repeat top center/cover;
 }
 
-section:active .helmet-shell {
+#battle:active .helmet-shell {
     background: rgb(1, 7, 17);
 }
 
-section:active .hearing-right,
-section:active .hearing-left,
-section:active .protec-top:before {
+#battle:active .hearing-right,
+#battle:active .hearing-left {
     border-bottom-color: rgb(38, 46, 52);
 }
 
-.title:hover.eye-right {
-    background-color: rgb(38, 46, 52);
-}
-
-section:active .shell-view--right,
-section:active .shell-view--left {
+#battle:active .shell-view--right,
+#battle:active .shell-view--left {
     background: rgb(16, 20, 22);
 }
 
-section:active .light-power {
+#battle:active .light-power {
     -moz-animation: omega-charge 5s ease-in-out infinite alternate;
     -webkit-animation: omega-charge 5s ease-in-out infinite alternate;
     animation: omega-charge 5s ease-in-out infinite alternate;
     background: #e1e6ff;
 }
 
-section:active .head-eyes-left,
-section:active .head-eyes-right {
+#battle:active .head-eyes-left,
+#battle:active .head-eyes-right {
     -moz-animation: charge-light 5s ease-in-out infinite alternate;
     -webkit-animation: charge-light 5s ease-in-out infinite alternate;
     animation: charge-light 5s ease-in-out infinite alternate;
     background: #ff00ce;
 }
 
-section:active .head-eyes-left .eye-left,
-section:active .head-eyes-right .eye-right {
+#battle:active .head-eyes-left .eye-left,
+#battle:active .head-eyes-right .eye-right {
     background-color: red;
     opacity: .125;
 }
 
-section:active .arrow-center {
+#battle:active .arrow-center {
     border-top-color: #370909;
 }
 
-section:active .arrow-center:before,
-section:active .arrow-left,
-section:active .arrow-right,
-section:active .hearing-left,
-section:active .hearing-right {
+#battle:active .arrow-center:before,
+#battle:active .arrow-left,
+#battle:active .arrow-right,
+#battle:active .hearing-left,
+#battle:active .hearing-right {
     background-color: #370909;
 }
 
-section:active .arrow-left:before,
-section:active .arrow-right:before {
+#battle:active .arrow-left:before,
+#battle:active .arrow-right:before {
     background-color: #240000;
 }
 
-section:active .hearing-right:after,
-section:active .hearing-right:before {
+#battle:active .hearing-right:after,
+#battle:active .hearing-right:before {
     border-bottom-color: #505050;
 }
 
-section:active .hearing-left:after,
-section:active .hearing-left:before {
+#battle:active .hearing-left:after,
+#battle:active .hearing-left:before {
     border-top-color: #505050;
 }
 
