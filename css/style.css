@@ -2,8 +2,9 @@ body {
     background: #000;
 }
 
-section {
-    background-color: tomato;
+#battle {
+    transition: all 5s;
+    background: tomato url('../img/zero.jpg') no-repeat top center/100% 100%;
     display: block;
     position: fixed;
     pointer-events: none;
@@ -12,10 +13,27 @@ section {
     width: 100%;
 }
 
+#battle:active .head-base:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background: rgba(76, 76, 76, 0);
+    background: -moz-linear-gradient(top, rgba(76, 76, 76, 0) 0%, rgba(89, 89, 89, 0.18) 18%, rgba(102, 102, 102, 0.32) 32%, rgba(71, 71, 71, 0.48) 48%, rgba(44, 44, 44, 0.62) 62%, rgba(28, 28, 28, 0.96) 96%, rgba(0, 0, 0, 0.98) 98%, rgba(17, 17, 17, 0.99) 99%, rgba(43, 43, 43, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(76, 76, 76, 0)), color-stop(18%, rgba(89, 89, 89, 0.18)), color-stop(32%, rgba(102, 102, 102, 0.32)), color-stop(48%, rgba(71, 71, 71, 0.48)), color-stop(62%, rgba(44, 44, 44, 0.62)), color-stop(96%, rgba(28, 28, 28, 0.96)), color-stop(98%, rgba(0, 0, 0, 0.98)), color-stop(99%, rgba(17, 17, 17, 0.99)), color-stop(100%, rgba(43, 43, 43, 1)));
+    background: -webkit-linear-gradient(top, rgba(76, 76, 76, 0) 0%, rgba(89, 89, 89, 0.18) 18%, rgba(102, 102, 102, 0.32) 32%, rgba(71, 71, 71, 0.48) 48%, rgba(44, 44, 44, 0.62) 62%, rgba(28, 28, 28, 0.96) 96%, rgba(0, 0, 0, 0.98) 98%, rgba(17, 17, 17, 0.99) 99%, rgba(43, 43, 43, 1) 100%);
+    background: -o-linear-gradient(top, rgba(76, 76, 76, 0) 0%, rgba(89, 89, 89, 0.18) 18%, rgba(102, 102, 102, 0.32) 32%, rgba(71, 71, 71, 0.48) 48%, rgba(44, 44, 44, 0.62) 62%, rgba(28, 28, 28, 0.96) 96%, rgba(0, 0, 0, 0.98) 98%, rgba(17, 17, 17, 0.99) 99%, rgba(43, 43, 43, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(76, 76, 76, 0) 0%, rgba(89, 89, 89, 0.18) 18%, rgba(102, 102, 102, 0.32) 32%, rgba(71, 71, 71, 0.48) 48%, rgba(44, 44, 44, 0.62) 62%, rgba(28, 28, 28, 0.96) 96%, rgba(0, 0, 0, 0.98) 98%, rgba(17, 17, 17, 0.99) 99%, rgba(43, 43, 43, 1) 100%);
+    background: linear-gradient(to bottom, rgba(76, 76, 76, 0) 0%, rgba(89, 89, 89, 0.18) 18%, rgba(102, 102, 102, 0.32) 32%, rgba(71, 71, 71, 0.48) 48%, rgba(44, 44, 44, 0.62) 62%, rgba(28, 28, 28, 0.96) 96%, rgba(0, 0, 0, 0.98) 98%, rgba(17, 17, 17, 0.99) 99%, rgba(43, 43, 43, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#2b2b2b', GradientType=0);
+}
+
 .play {
     background: #060606;
     color: #fff;
-    display: inline-block;
+    display: none;
     font-family: 'Press Start 2P', arial;
     line-height: 2;
     padding: 20px;
@@ -62,7 +80,7 @@ audio {
 
 .head-base {
     border-radius: 100%;
-    height: 480px;
+    height: 100%;
     margin: 0 auto;
     position: fixed;
     top: 125px;
@@ -210,6 +228,7 @@ audio {
     position: relative;
     top: 250px;
     width: 160px;
+    z-index: 1;
 }
 
 .hearing-left {
@@ -379,7 +398,7 @@ audio {
 }
 
 #battle:active {
-    background: #000 url('http://wallpapercave.com/wp/r1YOpKf.jpg') no-repeat top center/cover;
+    background: #000 url('../img/omega-full.jpg') no-repeat top center/cover;
 }
 
 #battle:active .helmet-shell {
@@ -401,6 +420,7 @@ audio {
     -webkit-animation: omega-charge 5s ease-in-out infinite alternate;
     animation: omega-charge 5s ease-in-out infinite alternate;
     background: #e1e6ff;
+    z-index: 4;
 }
 
 #battle:active .head-eyes-left,
